@@ -9,10 +9,21 @@ class Feature4Page extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Feature 4'),
       ),
-      body: const Center(
-        child: Text(
-          'This is Feature 4',
-          style: TextStyle(fontSize: 24),
+      body: Center(
+        child: Column(
+          children: [
+            const Text(
+              'This is Feature 4',
+              style: TextStyle(fontSize: 24),
+            ),
+            ElevatedButton(
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all<Color>(Colors.blue),
+              ),
+              onPressed: () {},
+              child: const Text('This is a blue button'),
+            ),
+          ],
         ),
       ),
     );
